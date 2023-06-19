@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href=".css/style.css">
+</head>
+
+<body style="font-family: 'Courier New', Courier, monospace">
+
+  <!-- /-----------------------------\ -->
+  <h2> Ex14 Maior menor que 10</h2>
+  <main class="exercicio1">
+    <!-- exercicio 14 faccat: Ler um valor que seja maior que 10, se não for mostrar que não é maior que 10 -->
+    <Button type="button" onclick="exercicio14()">clique aqui</Button>
+    <script>
+      function exercicio14() {
+        let numero = parseInt(prompt("Digite um Valor"))
+        if (numero > 10) {
+          alert(numero + " é maior que 10")
+        }
+        else {
+          alert(numero + " é menor que 10")
+        }
+      }
+    </script>
+    <!-- /-----------------------------\ -->
+    <main class="exercicio2">
+      <!-- exercicio 15 faccat: ler o valor e dizer se é positivo ou negativo -->
+      <h2> Ex15 Positivo negativo</h2>
+      <Button type="button" onclick="exercicio15()">clique aqui</Button>
+      <script>
+        function exercicio15() {
+          let numero = parseInt(prompt("Digite um Valor"))
+          if (numero >= 0) {
+            alert(numero + " é positivo")
+          }
+          else {
+            alert(numero + " é negativo")
+          }
+        }
+      </script>
+    </main>
+    <!-- /-----------------------------\ -->
+    <main class="exercicio3">
+      <!-- exercicio 16 faccat: Se a quantidade de maçãs for maior que 12 sai 1 real semenor que 12 sai 1,30 cada maçã -->
+      <h2> Ex16 Quantidade de maçãs</h2>
+      <Button type="button" onclick="calculoMacas()">clique aqui</Button>
+      <script>
+        function calculoMacas() {
+          let quantidadeMacas = parseInt(prompt("Digite a quantidade de Maçãs: "))
+
+          if (quantidadeMacas < 12) {
+            total = quantidadeMacas * 1.30
+            alert("Cada maçã vai sair por R$ 1,30 Sendo " + total.toFixed(2) + " o valor total.")
+
+          } else {
+            total = quantidadeMacas * 1
+            alert("Cada maçã vai sair por R$ 1,00 Sendo " + total.toFixed(2) + " o valor total.")
+
+          }
+        }
+      </script>
+    </main>
+
+    <!-- ----------------------------- -->
+    <main class="exercicio4">
+      <!-- exercicio 17 faccat: calcular a média do aluno -->
+      <h2> Ex17 Media do aluno</h2>
+      <Button type="button" onclick="Exercicio17()">clique aqui</Button>
+      <script>
+        function Exercicio17() {
+          let n1 = parseFloat(prompt("Digite a primeira nota: "));
+          let n2 = parseFloat(prompt("Digite a segunda nota: "));
+
+          media = (n1 + n2) / 2;
+
+          if (media >= 6) {
+            alert("A média do aluno é " + media + " ALUNO APROVADO!!!");
+          }
+          else {
+            alert("A média do aluno é " + media + " ALUNO REPROVADO!!!");
+          }
+        }
+      </script>
+    </main>
+    <!-- ----------------------------- -->
+    <main class="exercicio5">
+      <!-- exercicio 18 faccat: ler o ano atual e o ano de nascimento e escrever se pode ou nao votar -->
+      <h2> Ex18 Idade para poder votar</h2>
+      <Button type="button" onclick="Exercicio18()">clique aqui</Button>
+      <script>
+        function Exercicio18() {
+          let anoNascimento = parseInt(prompt("Digite o ano em que você nasceu: "));
+          let anoAtual = parseInt(prompt("Digite o ano atual: "));
+
+          PoderVotar = (anoAtual - anoNascimento);
+
+          if (PoderVotar >= 16) {
+            alert(PoderVotar + " Ja pode votar ");
+          }
+          else {
+            alert(PoderVotar + " Não pode votar ");
+          }
+        }
+      </script>
+    </main>
+    <main class="exercicio6">
+      <!-- exercicio 19 faccat: Ler dois valores e dizer qual dos dois é maior -->
+      <h2> Ex19 Dizer qual dos dois valores é Maior</h2>
+      <Button type="button" onclick="Exercicio19()">clique aqui</Button>
+      <script>
+        function Exercicio19() {
+          let valor1 = parseInt(prompt("Digite o primeiro número: "));
+          let valor2 = parseInt(prompt("Digite o segundo número: "));
+
+          if (valor1 > valor2) {
+            alert(valor1 + " Maior valor");
+          }
+          else {
+            alert(valor2 + " Maior valor ");
+          }
+        }
+      </script>
+    </main>
+    <!-- ---------------------------- -->
+    <main class="exercicio7">
+      <!-- exercicio 20 faccat: Ler dois valores e escrever em ordem crescente -->
+      <h2> Ex20 Ler dois valores em ordem crescente </h2>
+      <Button type="button" onclick="Exercicio20()">clique aqui</Button>
+      <script>
+        function Exercicio20() {
+          let valor1 = parseInt(prompt("Digite o primeiro número: "));
+          let valor2 = parseInt(prompt("Digite o segundo número: "));
+
+          if (valor1 < valor2) {
+            alert(valor1 + " , " + valor2);
+          }
+          else {
+            alert(valor2 + " , " + valor1);
+          }
+        }
+      </script>
+    </main>
+    <!-- ---------------------------- -->
+    <main class="exercicio8">
+      <!-- exercicio 21 faccat: Ler Hora de inicio de uma partida de xadrez e a hora final sabendo que o jogo pode iniciar em um dia e terminar no outro -->
+      <h2> Ex21 Horario de uma partida de xadrez </h2>
+      <Button type="button" onclick="Exercicio21()">clique aqui</Button>
+      <script>
+        function Exercicio21() {
+          let horasInicio = parseFloat(prompt("Inicio do jogo: "));
+          let horasFim = parseFloat(prompt("Termino do jogo: "));
+          let duracao;
+          if (horasInicio > horasFim) {
+            duracao = (24 - horasInicio) + horasFim;
+            alert("A duração foi:" + duracao + "HRS");
+          }
+          else {
+            duracao = horasFim - horasInicio;
+            alert("A duração foi: " + duracao + "HRS");
+          }
+        }
+      </script>
+    </main>
+    <!-- ---------------------------- -->
+    <main class="exercicio9">
+      <!-- exercicio 22 faccat: Ler Hora de inicio de uma partida de xadrez e a hora final sabendo que o jogo pode iniciar em um dia e terminar no outro -->
+      <h2> Ex22 Ler o salario e as horas trabalhadas </h2>
+      <Button type="button" onclick="exercicio22()">clique aqui</Button>
+      <script>
+        function exercicio22() {
+          let salario = parseFloat(prompt("Digite seu salario por hora: "));
+          let horas = parseFloat(prompt("Digite as horas trabalhadas: "));
+          let horasExtra;
+          let salarioTotal;
+          if (horas > 160) {
+            horasExtra = horas * 50 / 100
+            salarioTotal = 160 * salario + (horas - 160) * horasExtra
+            alert("Seu salario extra é: " + salarioTotal)
+          }
+          else {
+            alert("Não existe horas extras trabalhadas seu salario é " + salario)
+          }
+        }
+      </script>
+    </main>
+    <!-- ---------------------------- -->
+    <main class="exercicio10">
+      <!-- exercicio 23 faccat: Calcular o seu peso ideal -->
+      <h2> Ex23 ler o peso ideal da pessoa </h2>
+      <Button type="button" onclick="exercicio23()">clique aqui</Button>
+      <script>
+        function exercicio23() {
+          let nome = prompt(" Digite o seu nome: ");
+          let altura = parseFloat(prompt(" Digite a sua altura: "));
+          let sexo = prompt(" Digite se o seu sexo é masculino ou feminino: ");
+          if (sexo == 'masculino') {
+            pesoIdeal = (72.7 * altura) - 58;
+          } else {
+            pesoIdeal = (62.1 * altura) - 44.7;
+          }
+          alert(" O seu nome é : " + nome);
+          alert(" Com base nos dados o seu peso ideal é: " + pesoIdeal.toFixed(2));
+        }
+      </script>
+    </main>
+    <!-- ---------------------------- -->
+    <main class="exercicio11">
+      <!-- exercicio 24 faccat:Calcular o valor do salario -->
+      <h2> Ex24 Calcular o valor do salario </h2>
+      <Button type="button" onclick="exercicio24()">clique aqui</Button>
+      <script>
+        function exercicio24() {
+          // lendo o salário fixo e o valor das vendas efetuadas pelo vendedor
+          const salarioFixo = parseFloat(prompt("Digite o salário fixo do vendedor:"));
+          const valorVendas = parseFloat(prompt("Digite o valor total das vendas efetuadas pelo vendedor:"));
+          // calculando a comissão
+          let comissao = 0;
+          if (valorVendas <= 1500) {
+            comissao = valorVendas * 0.03;
+          } else {
+            comissao = (1500 * 0.03) + ((valorVendas - 1500) * 0.05);
+          }
+          const salarioTotal = salarioFixo + comissao;
+          alert(`O salário total do vendedor é R$${salarioTotal.toFixed(2)}`);
+        }
+      </script>
+    </main>
+    <!-- ---------------------------- -->
+    <main class="exercicio12">
+      <!-- exercicio 25 faccat:Ler o saldo do cliente -->
+      <h2> Ex25 Ler o saldo do cliente </h2>
+      <Button type="button" onclick="exercicio25()">clique aqui</Button>
+      <script>
+        function exercicio25() {
+          //Ler os valores de entrada
+          let numeroConta = prompt("Digite o número da conta do cliente:");
+          let saldo = parseFloat(prompt("Digite o saldo atual da conta:"));
+          let debito = parseFloat(prompt("Digite o valor do débito:"));
+          let credito = parseFloat(prompt("Digite o valor do crédito:"));
+
+          //Calcular o saldo atual
+          let saldoAtual = saldo - debito + credito;
+
+          //Verificar se o saldo atual é positivo ou negativo
+          if (saldoAtual >= 0) {
+            alert("Saldo Positivo");
+          } else {
+            alert("Saldo Negativo");
+          }
+        }
+      </script>
+    </main>
+    <!-- ---------------------------- -->
+    <main class="exercicio13">
+      <!-- exercicio 26 faccat:Ler a quantidade de estoque -->
+      <h2> Ex26 Ler a quantidade de estoque </h2>
+      <Button type="button" onclick="exercicio26()">clique aqui</Button>
+      <script>
+        function exercicio26() {
+          let quantidadeAtual = parseFloat(prompt("Informe a quantidade atual em estoque: "));
+          let quantidadeMaxima = parseFloat(prompt("Informe a quantidade máxima em estoque: "));
+          let quantidadeMinima = parseFloat(prompt("Informe a quantidade mínima em estoque: "));
+
+          let quantidadeMedia = (quantidadeMaxima + quantidadeMinima) / 2;
+
+          if (quantidadeAtual >= quantidadeMedia) {
+            alert("Não efetuar compra");
+          } else {
+            alert("Efetuar compra");
+          }
+        }
+      </script>
+    </main>
+    <!-- ---------------------------- -->
+    <main class="exercicio14">
+      <!-- exercicio 27 faccat:Identificar se é maior, menor ou zero -->
+      <h2> Ex27 Identificar se é maior, menor ou zero </h2>
+      <Button type="button" onclick="exercicio27()">clique aqui</Button>
+      <script>
+        function exercicio27() {
+          let valor = prompt("Digite um valor:");
+          if (valor > 0) {
+            Alert("O valor é positivo");
+          } else if (valor < 0) {
+            Alert("O valor é negativo");
+          } else {
+            Alert("O valor é zero");
+          }
+        }
+      </script>
+    </main>
+    <!-- ---------------------------- -->
+    <main class="exercicio15">
+      <!-- exercicio 28 faccat:Identificar maior valor -->
+      <h2> Ex28 Identificar maior valor </h2>
+      <Button type="button" onclick="exercicio28()">clique aqui</Button>
+      <script>
+        function exercicio28() {
+          let num1 = parseFloat(prompt("Digite o primeiro número: "));
+          let num2 = parseFloat(prompt("Digite o segundo número: "));
+          let num3 = parseFloat(prompt("Digite o terceiro número: "));
+          let maior = num1;
+          if (num2 > maior) {
+            maior = num2;
+          }
+          if (num3 > maior) {
+            maior = num3;
+          }
+          alert("O maior número é: " + maior);
+        }
+      </script>
+    </main>
+    <!-- ---------------------------- -->
+    <main class="exercicio16">
+      <!-- exercicio 29 faccat:Identificar maior valor -->
+      <h2> Ex29 Identificar maior valor </h2>
+      <Button type="button" onclick="exercicio29()">clique aqui</Button>
+      <script>
+        function exercicio29() {
+          let num1 = parseFloat(prompt("Digite o primeiro número: "));
+          let num2 = parseFloat(prompt("Digite o segundo número: "));
+          let num3 = parseFloat(prompt("Digite o terceiro número: "));
+          let maior = num1;
+          if (num2 > maior) {
+            maior = num2;
+          }
+          if (num3 > maior) {
+            maior = num3;
+          }
+          alert("O maior número é: " + maior);
+        }
+      </script>
+    </main>
+    <!-- ---------------------------- -->
+    <main class="exercicio17">
+      <!-- exercicio 30 faccat:Somar os dois maiores valores  -->
+      <h2> Ex30 Somar os dois maiores valores </h2>
+      <Button type="button" onclick="exercicio30()">clique aqui</Button>
+      <script>
+        function exercicio30() {
+          let valores = prompt("Digite três valores separados por vírgula:").split(",");
+          let num1 = parseFloat(valores[0]);
+          let num2 = parseFloat(valores[1]);
+          let num3 = parseFloat(valores[2]);
+          if (num1 > num2 && num1 > num3) {
+            Alert(num2 + num3);
+          } else if (num2 > num1 && num2 > num3) {
+            Alert(num1 + num3);
+          } else {
+            Alert(num1 + num2);
+          }
+        }
+      </script>
+    </main>
+    <!-- ---------------------------- -->
+    <main class="Exercicio18">
+      <!-- exercicio 31 faccat:Mostrar os valores crescentes  -->
+      <h2> Ex31 Mostrar os valores crescentes </h2>
+      <Button type="button" onclick="exercicio31()">clique aqui</Button>
+      <script>
+        function exercicio31() {
+          let a = parseFloat(prompt("Digite o primeiro valor:"));
+          let b = parseFloat(prompt("Digite o segundo valor:"));
+          let c = parseFloat(prompt("Digite o terceiro valor:"));
+          let menor = Math.min(a, b, c);
+          let maior = Math.max(a, b, c);
+          let meio = (a + b + c) - menor - maior;
+          alert(menor + ", " + meio + ", " + maior);
+        }
+      </script>
+    </main>
+    <!-- ---------------------------- -->
+    <main class="Exercicio19">
+      <!-- exercicio 32 faccat: Verificar três lados e retornar se forma ou não triângulo  -->
+      <h2> Ex32 três lados formam um triangulo </h2>
+      <Button type="button" onclick="exercicio32()">clique aqui</Button>
+      <script>
+        function exercicio32() {
+          var ladoA = parseFloat(prompt("Digite o valor do lado A:"));
+          var ladoB = parseFloat(prompt("Digite o valor do lado B:"));
+          var ladoC = parseFloat(prompt("Digite o valor do lado C:"));
+          if (ladoA < ladoB + ladoC && ladoB < ladoA + ladoC && ladoC < ladoA + ladoB) {
+            alert("Formam um triângulo.");
+          } else {
+            alert("Não formam um triângulo.");
+          }
+        }
+      </script>
+    </main>
+    <!-- ---------------------------- -->
+    <main class="Exercicio20">
+      <!-- exercicio 33 faccat: Ler dois números e retornar se é maior, menor ou igual -->
+      <h2> Ex33 Numero Maior, Menor, Igual </h2>
+      <Button type="button" onclick="exercicio33()">clique aqui</Button>
+      <script>
+        function exercicio33() {
+          var a = parseFloat(prompt("Digite o primeiro número:"));
+          var b = parseFloat(prompt("Digite o segundo número:"));
+          if (a === b) {
+            alert("Números iguais");
+          } else if (a > b) {
+            alert("Primeiro é maior");
+          } else {
+            alert("Segundo é maior");
+          }
+        }
+      </script>
+    </main>
+    <!-- ---------------------------- -->
+    <main class="Exercicio21">
+      <!-- exercicio 34 faccat: Calcular o valor da gasolina ou alcool baseado no desconto -->
+      <h2> Ex34 Gasolina ou Alcool, Valor com ajuste</h2>
+      <Button type="button" onclick="exercicio34()">clique aqui</Button>
+      <script>
+        function exercicio34() {
+          var combustivel = prompt("Digite o tipo de combustível (a-)álcool, b-)gasolina");
+          var litros = parseFloat(prompt("Digite o número de litros vendidos:"));
+          var precoGasolina = 3.30;
+          var precoAlcool = 2.90;
+          var valorTotal = 0;
+          if (combustivel === 'a') {
+            if (litros <= 20) {
+              valorTotal = litros * precoAlcool * 0.97;
+            }
+            else {
+              valorTotal = litros * precoAlcool * 0.95;
+            }
+          }
+          else if (combustivel === 'b') {
+            if (litros <= 20) {
+              valorTotal = litros * precoGasolina * 0.96;
+              Alert(valorTotal.toFixed(2));
+            }
+            else { valorTotal = litros * precoGasolina * 0.94; }
+          }
+          Alert(valorTotal.toFixed(2));
+        }
+        var valorPago = calcularValorPago(combustivel, litros);
+        console.log("Valor a serpago pelo cliente: R$ " + valorPago);
+      </script>
+    </main>
+    <!-- ---------------------------- -->
+    <main class="Exercicio22">
+      <!-- exercicio 35 faccat: calcular a idade de 4 pessoas sendo dois homens e duas mulheres-->
+      <h2> Ex35 calcular a idade de 4 pessoas</h2>
+      <Button type="button" onclick="exercicio35()">clique aqui</Button>
+      <script>
+        function exercicio35() {
+          var idade = parseInt(prompt('Digite a idade de ${nome}:'));
+          return idade;
+        }
+        function calcularSomaIdades(homemMaisVelho, mulherMaisNova) {
+          return homemMaisVelho + mulherMaisNova;
+        }
+        function calcularProdutoIdades(homemMaisNovo, mulherMaisVelha) {
+          return homemMaisNovo * mulherMaisVelha;
+        }
+        var idadeHomem1 = lerIdade("Homem 1");
+        var idadeHomem2 = lerIdade("Homem 2");
+        var idadeMulher1 = lerIdade("Mulher 1");
+        var idadeMulher2 = lerIdade("Mulher 2");
+        var homemMaisVelho = idadeHomem1 > idadeHomem2 ? idadeHomem1 : idadeHomem2;
+        var mulherMaisNova = idadeMulher1 < idadeMulher2 ? idadeMulher1 : idadeMulher2;
+        var somaIdades = calcularSomaIdades(homemMaisVelho, mulherMaisNova);
+        var homemMaisNovo = idadeHomem1 < idadeHomem2 ? idadeHomem1 : idadeHomem2;
+        var mulherMaisVelha = idadeMulher1 > idadeMulher2 ? idadeMulher1 : idadeMulher2;
+        var produtoIdades = calcularProdutoIdades(homemMaisNovo, mulherMaisVelha);
+        console.log("A soma das idades do homem mais velho com a mulher mais nova é: " + somaIdades);
+        console.log("O produto das idades do homem mais novo com a mulher mais velha é: " + produtoIdades);
+      </script>
+    </main>
+    <!-- ---------------------------- -->
+    <main class="Exercicio23">
+      <!-- exercicio 36 faccat:  Loja de morangos-->
+      <h2> Ex36 Loja de morangos</h2>
+      <Button type="button" onclick="exercicio36()">clique aqui</Button>
+      <script>
+        function exercicio36() {
+          var precoMorango = kgMorangos <= 5 ? 2.5 : 2.2;
+          var precoMaca = kgMacas <= 5 ? 1.8 : 1.5;
+          var valorMorangos = kgMorangos * precoMorango;
+          var valorMacas = kgMacas * precoMaca;
+          var valorTotal = valorMorangos + valorMacas;
+          if ((kgMorangos + kgMacas) > 8 || valorTotal > 25) {
+            valorTotal *= 0.9;
+          }
+          Alert(valorTotal.toFixed(2));
+        }
+        var kgMorangos = parseFloat(prompt("Digite a quantidade de morangos (em Kg):"));
+        var kgMacas = parseFloat(prompt("Digite a quantidade de maçãs (em Kg):"));
+        var valorAPagar = calcularValorAPagar(kgMorangos, kgMacas);
+        console.log("Valor a ser pago pelo cliente: R$ " + valorAPagar);
+      </script>
+    </main>
+    <!-- ---------------------------- -->
+    <main class="Exercicio24">
+      <!-- exercicio 37 faccat:  Usuario e Senha incorretos-->
+      <h2> Ex37 Usuario e Senha incorretos</h2>
+      <Button type="button" onclick="exercicio37()">clique aqui</Button>
+      <script>
+        function exercicio37() {
+          var codigoCorreto = 1234;
+          var senhaCorreta = 9999;
+          if (codigoUsuario !== codigoCorreto) {
+            return "Usuário inválido!";
+          } else if (senha !== senhaCorreta) {
+            return "Senha incorreta!";
+          } else {
+            return "Acesso permitido";
+          }
+        }
+        var codigoUsuario = parseInt(prompt("Digite o código de usuário:"));
+        if (verificarAcesso(codigoUsuario) === "Usuário inválido!") {
+          console.log("Usuário inválido!");
+        } else {
+          var senha = parseInt(prompt("Digite a senha:"));
+          var mensagemAcesso = verificarAcesso(codigoUsuario, senha);
+          console.log(mensagemAcesso);
+        }
+      </script>
+    </main>
+    <!-- ---------------------------- -->
+    <main class="Exercicio25">
+      <!-- exercicio 38 faccat:  Descrição do produto e preço com porcentagem de desconto em 2%, 3% ou 5%-->
+      <h2> Ex38 Descrição do produto e preço</h2>
+      <Button type="button" onclick="exercicio38()">clique aqui</Button>
+      <script>
+        function exercicio38() {
+          if (quantidade <= 5) {
+            return 0.02;
+          } else if (quantidade <= 10) {
+            return 0.03;
+          } else {
+            return 0.05;
+          }
+        }
+        var descricaoProduto = prompt("Digite a descrição do produto:");
+        var quantidade = parseInt(prompt("Digite a quantidade adquirida:"));
+        var precoUnitario = parseFloat(prompt("Digite o preço unitário do produto:"));
+        var total = quantidade * precoUnitario;
+        var descontoPercentual = calcularDesconto(quantidade);
+        var desconto = total * descontoPercentual;
+        var totalAPagar = total - desconto;
+        Alert("Descrição do produto: " + descricaoProduto);
+        Alert("Quantidade adquirida: " + quantidade);
+        Alert("Preço unitário: R$ " + precoUnitario.toFixed(2));
+        Alert("Total: R$ " + total.toFixed(2));
+        Alert("Desconto: R$ " + desconto.toFixed(2));
+        Alert("Total a pagar: R$ " + totalAPagar.toFixed(2));
+      </script>
+    </main>
+    <!-- ---------------------------- -->
+    <main class="Exercicio26">
+      <!-- exercicio 39 faccat:  Lê um valor até que ele seja um valor diferente de 0-->
+      <h2> Ex39 Repitir enquanto for zero</h2>
+      <Button type="button" onclick="exercicio39()">clique aqui</Button>
+      <script>
+        function exercicio39() {
+          var valor = parseFloat(prompt("Digite um valor diferente de zero:"));
+          while (valor === 0) {
+            valor = parseFloat(prompt("Valor inválido! Digite um valor diferente de zero:"));
+          }
+          return valor;
+        }
+        var valor1 = parseFloat(prompt("Digite o primeiro valor:"));
+        var valor2 = lerValorNaoZero();
+        var resultado = valor1 / valor2;
+        console.log("Resultado da divisão: " + resultado);
+      </script>
+    </main>
+    <!-- ---------------------------- -->
+    <main class="Exercicio27">
+      <!-- exercicio 40 faccat: Avaliações aluno, ler duas notas e calcular a média-->
+      <h2> Ex40 Avaliações aluno</h2>
+      <Button type="button" onclick="exercicio40()">clique aqui</Button>
+      <script>
+        function exercicio40() {
+          var nota = parseFloat(prompt("Digite a nota da " + avaliacao + "ª avaliação:"));
+          while ("nota < 0  nota > 10  isNaN"(nota)) {
+            nota = parseFloat(prompt("Nota inválida! Digite uma nota entre 0 e 10:"));
+          }
+          return nota;
+        }
+        var nota1 = lerNotaValida("1");
+        var nota2 = lerNotaValida("2");
+        var media = (nota1 + nota2) / 2;
+        console.log("Média do aluno: " + media.toFixed(2));
+      </script>
+    </main>
+        <!-- ---------------------------- -->
+        <h2 class="subtitulo"> Manzano </h2>
+    <main class="Exercicio27">
+      <!-- exercicio 41 faccat: Avaliações aluno, ler duas notas e calcular a média-->
+      <h2> Ex41 Avaliações aluno</h2>
+      <Button type="button" onclick="exercicio41()">clique aqui</Button>
+      <script>
+        function exercicio41(){
+
+        }
+      </script>
+    </main>
+
+</html>

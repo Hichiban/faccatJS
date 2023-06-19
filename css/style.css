@@ -1,0 +1,30 @@
+body{
+  background: url(/img/Ocean.jpg);
+  background-size: cover;
+}
+
+button{
+  border-radius: 20px;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: medium;
+  background-color: rgb(72, 211, 146);
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: rgb(7, 100, 187)
+}
+
+h2{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: larger;
+  color: black;
+  background-color: rgb(72, 211, 146);
+  max-width: 40%;
+  max-height: 25px;
+  border-radius: 20px;
+  cursor: default;
+}
+
